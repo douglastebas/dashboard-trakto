@@ -26,8 +26,20 @@
         }
 
         .user_navbar {
-            padding-top: 21px;
-            padding-left: 56px;
+            display: flex;
+            padding-right: 56px;
+
+            .dropdown-menu-dark {
+                margin-left: -5rem;
+            }
+
+            .navbar-collapse {
+                gap: 16px;
+
+                .date {
+                    font-size: 18px;
+                }
+            }
         }
     }
 }

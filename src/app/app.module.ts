@@ -42,37 +42,3 @@ import { ListComponent } from '@app/list';
     bootstrap: [AppComponent]
 })
 export class AppModule { };
-
-// import { NgModule } from '@angular/core';
-// import { BrowserModule } from '@angular/platform-browser';
-
-// import { AppRoutingModule } from './app-routing.module';
-// import { AppComponent } from './app.component';
-// import { LoginComponent } from './login/login.component';
-// import { ModuleListComponent } from './module-list/module-list.component';
-// import { ModuleComponent } from './module/module.component';
-// import { DesignListComponent } from './design-list/design-list.component';
-// import { ReactiveFormsModule } from '@angular/forms';
-// import { CommonModule } from '@angular/common';
-// import { VMessageModule } from './shared/components/vmessage/vmessage.module';
-
-// @NgModule({
-//     declarations: [
-//         AppComponent,
-//         LoginComponent,
-//         ModuleListComponent,
-//         ModuleComponent,
-//         DesignListComponent,
-//         // VMessageComponent
-//     ],
-//     providers: [],
-//     bootstrap: [AppComponent],
-//     imports: [
-//         AppRoutingModule,
-//         BrowserModule,
-//         CommonModule,
-//         ReactiveFormsModule,
-//         VMessageModule
-//     ]
-// })
-// export class AppModule { }

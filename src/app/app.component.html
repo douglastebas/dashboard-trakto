@@ -9,16 +9,31 @@
         </div>
 
         <div class="user_navbar">
-            <span class="date">
-                {{ today | date:'dd/M/yy' }}
-            </span> |
-            <span class="notifications">
-                <svg-icon src="assets/images/bell.svg"></svg-icon>
-            </span> |
-            <span>
-                
-                <button class="btn btn-link nav-item nav-link" (click)="logout()">Logout</button>
-            </span>
+            <!-- <span> -->
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <div class="d-flex gap-2">
+                        <svg-icon src="assets/images/calendar.svg"></svg-icon>
+                        <div class="date">
+                            {{ today | date:'dd/MM/yy' }}
+                        </div>
+                    </div>
+                    <svg-icon src="assets/images/vertical_ruler.svg"></svg-icon>
+                    <div class="notifications">
+                        <svg-icon src="assets/images/bell.svg"></svg-icon>
+                    </div>
+                    <svg-icon src="assets/images/vertical_ruler.svg"></svg-icon>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown-center">
+                            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/images/avatar.png">
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <a class="dropdown-item" (click)="logout()">Logout</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            <!-- </span> -->
         </div>
     </div>
 </nav>
