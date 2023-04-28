@@ -1,0 +1,73 @@
+
+
+.list-container {
+    margin: 32px 64px;
+    padding: 56px 10px 84px 72px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    background-color: #ffffff;
+    
+    .btn-designs {
+        padding-right: 72px;
+        color: #4743FF;
+
+        a {
+            color: #4743FF;
+            border-color: #4743FF!important;
+        }
+
+    }
+
+    .courseware-badge {
+        background-color: #E4EBFB;
+        border-radius: 500px;
+        padding: 4px 8px;
+        small {
+            font-weight: 500;
+            font-size: 16px;
+            text-align: center;
+            color: #7183A6;
+        }
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: 24px;
+        color: #354564;
+    }
+
+    .subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #7183A6;
+    }
+    .list-designs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        .list-recent {
+        }
+        .card-designs {
+            img {
+                width: 100%;
+                height: 174px;
+                object-fit: cover;
+            }
+            .card-body {    
+                .card-title {
+                    white-space: nowrap;                  
+                    overflow: hidden; /* "overflow" value must be different from "visible" */
+                    text-overflow:    ellipsis;
+                    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    color: black;
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+                small {
+                    color: grey;
+                }
+            }
+        }
+    }
+}

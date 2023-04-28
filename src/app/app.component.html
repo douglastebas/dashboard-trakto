@@ -1,1 +1,29 @@
-<app-login></app-login>
+<nav class="navbar navbar-expand navbar-dark bg-dark px-3" id="navbar-trakto" *ngIf="user">
+    <div class="navbar-nav">
+        <div class="logo_navbar">
+            <svg-icon src="assets/images/trakto_logo_bar.svg"></svg-icon>
+            <a type="button" routerLink="/home" class="btn btn-outline-secondary" id="btn-home">
+                <i class="bi bi-box-arrow-in-left"></i>
+                <span>Trocar de ambiente</span>
+            </a>
+        </div>
+
+        <div class="user_navbar">
+            <span class="date">
+                {{ today | date:'dd/M/yy' }}
+            </span> |
+            <span class="notifications">
+                <svg-icon src="assets/images/bell.svg"></svg-icon>
+            </span> |
+            <span>
+                
+                <button class="btn btn-link nav-item nav-link" (click)="logout()">Logout</button>
+            </span>
+        </div>
+    </div>
+</nav>
+
+<div class="app-container" [ngClass]="{ 'bg-light': user }">
+    <alert></alert>
+    <router-outlet></router-outlet>
+</div>

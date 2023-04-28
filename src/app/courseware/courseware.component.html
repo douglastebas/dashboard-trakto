@@ -1,0 +1,42 @@
+<div class="courseware-container">
+    <div class="banner-container">
+        <img src="assets/images/banner.png" />
+    </div>
+    <div class="list-container">
+        <div class="d-flex justify-content-between pb-4">
+            <div>
+                <p class="badge courseware-badge">
+                    <small>
+                        Semana {{ mostRecentDate | date: 'd/M'}} até {{ lessRecentDate | date: 'd/M'}}
+                    </small>
+                </p>
+                <h1 class="title">Material Didático</h1>
+                <p class="subtitle">Acesse seus últimos desings</p>
+            </div>
+            <div class="btn-designs">
+                <a routerLink="/courseware/designs" id="btn" class="btn btn-outline-primary btn-lg mb-2">Ver todo o conteúdo</a>
+            </div>
+        </div>
+        <div class="overflow-x-auto list-designs">
+            <div *ngFor="let design of recentDesigns" class="list-recent">
+                <a (click)="openPresentation(design['id'])" class="">
+                    <div class="card card-designs" style="width: 18rem;">
+                        <img
+                            src="{{design['thumbs'].low}}"
+                            class="card-img-top"
+                            alt="..."
+                            width="100"
+                            lazy-loading
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">{{design['title']}}</h5>
+                            <small><strong>Última edição: </strong>{{ design['updated_at'] | date:'h:mm a, d/M/yy' }}</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+</div>

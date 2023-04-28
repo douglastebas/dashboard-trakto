@@ -1,0 +1,33 @@
+#navbar-trakto {
+    height: 76px;
+    display: flex;
+    
+    .navbar-nav {
+        width: 100%;
+        max-height: 100%;
+        color: #ffffff;
+        justify-content: space-between;
+
+        .logo_navbar {
+            padding-left: 56px;
+            padding-top: 5px;
+            height: 56px;
+            display: flex;
+
+            #btn-home {
+                justify-content: space-around;
+                padding: 12px 26px;
+                margin-left: 70px;
+
+                :first-child {
+                    padding-right: 6px;
+                }
+            }
+        }
+
+        .user_navbar {
+            padding-top: 21px;
+            padding-left: 56px;
+        }
+    }
+}
