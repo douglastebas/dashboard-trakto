@@ -25,7 +25,7 @@ export class DesignService {
     }
     
     getRecentDesigns() {
-        return this.http.get<Response>(`${environment.apiUrl}/document?nextCursor=&total_per_page=10&order_by=updated_at&order_orientation=desc`); // Criar model de design
+        return this.http.get<Response>(`${environment.apiUrl}/document?nextCursor=&total_per_page=10&order_by=updated_at&order_orientation=desc`);
     }
 
     getPresentation(id: string) {

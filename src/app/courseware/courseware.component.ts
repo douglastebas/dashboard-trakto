@@ -9,16 +9,16 @@ import { Design } from '@app/_models';
     styleUrls: ['./courseware.component.scss'] })
 export class CoursewareComponent implements OnInit {
     recentDesigns?: any[];
-
-    mostRecentDate?: number =  Date.now();
-    lessRecentDate?: number =  Date.now();
-
+    mostRecentDate?: number = Date.now();
+    lessRecentDate?: number = Date.now();
 
     constructor(private designService: DesignService) {}
 
     ngOnInit() {
         this.designService.getRecentDesigns()
-            .pipe(first()).subscribe(response => this.recentDesigns = response.data);
+            .pipe(first()).subscribe(response => {
+                this.recentDesigns = response.data;
+    });
     }
 
     

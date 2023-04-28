@@ -24,21 +24,18 @@ export class LoginComponent implements OnInit {
 
     ngOnInit() {
         this.form = this.formBuilder.group({
-            username: ['dev-master@trakto.io', Validators.required],
-            password: ['K8k!fULUY3w.MK', Validators.required]
+            username: ['', Validators.required],
+            password: ['', Validators.required]
         });
     }
 
-    // convenience getter for easy access to form fields
     get f() { return this.form.controls; }
 
     onSubmit() {
         this.submitted = true;
 
-        // reset alerts on submit
         this.alertService.clear();
 
-        // stop here if form is invalid
         if (this.form.invalid) {
             return;
         }
@@ -48,12 +45,10 @@ export class LoginComponent implements OnInit {
             .pipe(first())
             .subscribe({
                 next: () => {
-                    // get return url from query parameters or default to home page
                     const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
                     this.router.navigateByUrl(returnUrl);
                 },
                 error: error => {
-                    console.log("Que erro?", error);
                     this.alertService.error(error);
                     this.loading = false;
                 }

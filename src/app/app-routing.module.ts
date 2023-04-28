@@ -13,8 +13,6 @@ const routes: Routes = [
     { path: 'courseware', component: CoursewareComponent, canActivate: [AuthGuard] },
     { path: 'courseware/designs', component: ListComponent, canActivate: [AuthGuard] },
     { path: 'account', loadChildren: accountModule },
-
-    // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];
 

@@ -23,5 +23,12 @@ div#home {
     .module-container {
         justify-content: none;
         min-height: 543px;
+        transition: transform .3s;
+    }
+
+    .module-container:hover {
+        -ms-transform: scale(1.15); /* IE 9 */
+        -webkit-transform: scale(1.15); /* Safari 3-8 */
+        transform: scale(1.15);
     }
 }
