@@ -28,7 +28,6 @@ export class AccountService {
         return this.http.post<User>(`${environment.apiUrl}/auth/signin`, { email, password })
             .pipe(map(user => {
                 localStorage.setItem('user', JSON.stringify(user));
-                console.log('usuárioooow', localStorage.getItem('user'));
                 this.userSubject.next(user);
                 return user;
             }));
